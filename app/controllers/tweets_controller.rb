@@ -8,9 +8,9 @@ class TweetsController < ApplicationController
     I18n.locale = :es
   end
 
-   def search
+  def search
     query = params[:query_text]
-    @tweets = Tweet.where("user_name LIKE ?", "%#{query}%")
+    @tweets = Tweet.where("user_name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
   end
   
   # GET /tweets/1 or /tweets/1.json

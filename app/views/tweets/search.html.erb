@@ -1,4 +1,7 @@
-<% @tweets.each do |tweet| %>
-  <%= tweet.description %> <br>
-  <hr>
+<% if @tweets.present? %>
+  <h1>Tweet encontrado:</h1>
+  <%= render @tweets.first %>
+  <%= link_to "Volver a Tweets", tweets_path, class: "btn btn-secondary" %>
+<% else %>
+  <p>No se encontraron tweets.</p>
 <% end %>

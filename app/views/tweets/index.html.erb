@@ -1,4 +1,3 @@
-
 <p style="color: green"><%= notice %></p>
 <h1>Tweets</h1>
 <div id="tweets">
@@ -10,8 +9,11 @@
     <hr>
   <% end %>
 </div>
-<%= link_to "Nuevo tweet", new_tweet_path , class: "btn btn-primary"%> 
+<%= link_to "Nuevo tweet", new_tweet_path, class: "btn btn-primary" %>
 <br> <br>
-<%== pagy_bootstrap_nav(@pagy) %>
+<div class="d-flex justify-content-center">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
 
 

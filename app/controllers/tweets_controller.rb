@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   def index
    # @tweets = Tweet.all
     @pagy, @tweets = pagy(Tweet.all)
-    I18n.locale = :es
+    I18n.locale = :en
   end
 
   def search

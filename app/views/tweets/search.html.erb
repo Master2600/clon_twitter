@@ -3,6 +3,7 @@
   <h1>Tweets encontrados:</h1>
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
+    <hr>
   <% end %>
   <%= link_to "Volver a Tweets", tweets_path, class: "btn btn-secondary" %>
 <% else %>

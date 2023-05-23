@@ -7,7 +7,12 @@ class TweetsController < ApplicationController
     @pagy, @tweets = pagy(Tweet.all)
     I18n.locale = :es
   end
-
+  
+  def search
+    @pagy, @tweets = pagy(Tweet.where("description LIKE ?", "%#{params[:query_text]}%"))
+    render :index
+  end
+  
   # GET /tweets/1 or /tweets/1.json
   def show
   end

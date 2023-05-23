@@ -10,7 +10,8 @@
     <hr>
   <% end %>
 </div>
-<%= link_to "Nuevo tweet", new_tweet_path %>
+<%= link_to "Nuevo tweet", new_tweet_path , class: "btn btn-primary"%> 
+<br> <br>
 <%== pagy_bootstrap_nav(@pagy) %>
 
 

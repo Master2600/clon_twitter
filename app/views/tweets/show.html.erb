@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-success"><%= notice %></p>
 
-<%= render @tweet %>
+<div class="row">
+  <div class="col-12">
+    <%= render @tweet %>
+  </div>
 
-<div>
-  <%= link_to "Editar este tweet", edit_tweet_path(@tweet) %> |
-  <%= link_to "Volver a tweets", tweets_path %>
+  <div class="col-12">
+    <%= link_to "Editar este tweet", edit_tweet_path(@tweet) %> |
+    <%= link_to "Volver a tweets", tweets_path %>
 
-  <%= button_to "Eliminar este tweet", @tweet, method: :delete %>
+    <%= button_to "Eliminar este tweet", @tweet, method: :delete, data: { confirm: "¿Estás seguro de que deseas eliminar este tweet?" }, class: "btn btn-primary" %>
+  </div>
 </div>
+
+

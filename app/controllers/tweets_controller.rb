@@ -25,7 +25,7 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to tweet_url(@tweet), notice: "Tweet was successfully created." }
+        format.html { redirect_to tweet_url(@tweet), notice: "Tweet fue Creado Exitosamente." }
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class TweetsController < ApplicationController
   def update
     respond_to do |format|
       if @tweet.update(tweet_params)
-        format.html { redirect_to tweet_url(@tweet), notice: "Tweet was successfully updated." }
+        format.html { redirect_to tweet_url(@tweet), notice: "Tweet fue Actualizado Exitosamente." }
         format.json { render :show, status: :ok, location: @tweet }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class TweetsController < ApplicationController
     @tweet.destroy
 
     respond_to do |format|
-      format.html { redirect_to tweets_url, notice: "Tweet was successfully destroyed." }
+      format.html { redirect_to tweets_url, notice: "Tweet fue Eliminado con Exito!." }
       format.json { head :no_content }
     end
   end

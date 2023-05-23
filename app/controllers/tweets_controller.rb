@@ -5,6 +5,7 @@ class TweetsController < ApplicationController
   def index
    # @tweets = Tweet.all
     @pagy, @tweets = pagy(Tweet.all)
+    I18n.locale = :es
   end
 
   # GET /tweets/1 or /tweets/1.json

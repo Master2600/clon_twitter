@@ -1,0 +1,18 @@
+<div id="<%= dom_id tweet %>">
+  <p>
+    <strong>Contenido:</strong>
+    <%= tweet.description %>
+  </p>
+
+  <p>
+    <strong>Nombre Usuario:</strong>
+    <%= tweet.user_name %>
+  </p>
+
+  <p>
+    <strong>Fecha Tweet:</strong>
+    <%= tweet.created_at.strftime("%d/%m/%y %H:%M:%S") %>
+  </p>
+</div>
+
+
